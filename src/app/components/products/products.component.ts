@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
 
+  public productDate = "2020.11.20";
+
 }
