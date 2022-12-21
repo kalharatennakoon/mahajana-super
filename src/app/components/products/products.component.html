@@ -17,7 +17,7 @@
           <td>{{ product.productName }}</td>
           <td>{{ product.productDescription }}</td>
           <td>{{ product.createdDate | date }}</td>
-          <td>{{ product.unitPrice }}</td>
+          <td>{{ product.unitPrice | currency: 'Rs. '}}</td>
           <td>{{ product.quantity }}</td>
           <td>
             <i class="fa fa-eye icon"></i>
