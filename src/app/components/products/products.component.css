@@ -20,3 +20,7 @@ table tr td {
     color: rgb(99, 98, 98);
     margin: 5px;
 }
+
+/* .table tr:hover {
+    background-color: rgb(99, 98, 90);
+} */

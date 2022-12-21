@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
 
+  public isLowInventry: boolean = false; 
+
   public products = [
     {
       'productId' : "001",
@@ -36,7 +38,7 @@ export class ProductsComponent {
       'productId' : "004",
       'productName' : "Flour",
       'createdDate': "Jan 29, 2020",
-      'quantity': 50,
+      'quantity': 45,
       'unitPrice': "190",
       'productDescription':"Super Fine Whole grain general Purpose flour"
       },

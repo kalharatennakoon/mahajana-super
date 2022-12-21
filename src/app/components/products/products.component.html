@@ -8,6 +8,7 @@
           <th scope="col">Created Date</th>
           <th scope="col">Unit Price</th>
           <th scope="col">Quentity in Kgs</th>
+          <th scope="col">Availability</th>
           <th scope="col">Product Actions</th>
         </tr>
       </thead>
@@ -18,7 +19,11 @@
           <td>{{ product.productDescription }}</td>
           <td>{{ product.createdDate | date }}</td>
           <td>{{ product.unitPrice | currency: 'Rs. '}}</td>
-          <td>{{ product.quantity }}</td>
+          <td [ngClass]="">{{ product.quantity }}</td>
+          <td>
+            <p *ngIf="product.quantity <= 50">Lower Inventory Level</p>
+            <p *ngIf="product.quantity > 50">Sufficient Inventory Level</p>
+          </td>
           <td>
             <i class="fa fa-eye icon"></i>
             <i class="fa fa-pencil-square-o icon"></i>
