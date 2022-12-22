@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
 
-  public isLowInventry: boolean = false; 
+  public rowIndex!: number;
+  showAddProduct!: boolean;
+
+  constructor() {}
+
+  ngOnInit(): void {}
 
   public products = [
     {
@@ -42,7 +47,19 @@ export class ProductsComponent {
       'unitPrice': "190",
       'productDescription':"Super Fine Whole grain general Purpose flour"
       },
-  ]
+  ];
+
+  public selectProduct(selectedRow: number) {
+    this.rowIndex = selectedRow;
+  };
+
+  showAddProducts() {
+    this.showAddProduct = true;
+  };
+
+  hideAddProducts() {
+    this.showAddProduct = false;
+  };
 
 
 }
