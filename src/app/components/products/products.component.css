@@ -24,3 +24,27 @@ table tr td {
 /* .table tr:hover {
     background-color: rgb(99, 98, 90);
 } */
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    color: rgb(65, 65, 65);
+}
+
+.btn-outline-primary:hover{
+    background-color: cornflowerblue !important;;
+    border-color: cornflowerblue !important;;
+}
+
+.btn-xs{
+    margin :1px;
+    border-radius:2px;
+} 
