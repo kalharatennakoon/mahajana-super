@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
     {
       'productId' : "001",
       'productName' : "White Basmathi Rice",
-      'createdDate' : "2020.11.10",
+      'createdDate' : "2020-11-10",
       'quantity' : 500,
       'unitPrice' : "400",
       'productDescription' : "White Basmathi Rice imported from Pakistan"
@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
     {
       'productId' : "002",
       'productName' : "Dhal",
-      'createdDate' : "2021.10.15",
+      'createdDate' : "2021-10-15",
       'quantity' : 320,
       'unitPrice' : "240",
       'productDescription' : "Sri Lankan organic Dhal"
@@ -34,7 +34,7 @@ export class ProductsComponent implements OnInit {
     { 
       'productId' : "003",
       'productName' : "sugar",
-      'createdDate': "Jan 29, 2020",
+      'createdDate': "2020-01-19",
       'quantity': 1200,
       'unitPrice': "200",
       'productDescription':"White sugar manufactured by Palwatte Factory"
@@ -42,7 +42,7 @@ export class ProductsComponent implements OnInit {
     { 
       'productId' : "004",
       'productName' : "Flour",
-      'createdDate': "Jan 29, 2020",
+      'createdDate': "2020-01-29",
       'quantity': 45,
       'unitPrice': "190",
       'productDescription':"Super Fine Whole grain general Purpose flour"
