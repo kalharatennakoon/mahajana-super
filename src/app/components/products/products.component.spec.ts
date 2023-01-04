@@ -1,3 +1,5 @@
+// this test file is used to write unit tests related to the component
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductsComponent } from './products.component';

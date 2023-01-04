@@ -1,3 +1,5 @@
+// this is the class file of the component
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
+
 export class ProductsComponent implements OnInit {
 
   public rowIndex!: number;
