@@ -1,0 +1,5 @@
+/* we can use these custom styles in any component by using the relevant selector */
+
+.font {
+    font-size: 30px;
+}
