@@ -16,10 +16,11 @@ table tr td {
     cursor: pointer;
 }
 
-.icon {
-    color: rgb(99, 98, 98);
-    margin: 5px;
+table tbody tr.active td {
+    background-color: #c8daf8;
 }
+
+
 
 /* .table tr:hover {
     background-color: rgb(99, 98, 90);
@@ -44,7 +45,12 @@ h1 {
     border-color: cornflowerblue !important;;
 }
 
-.btn-xs{
+/* .btn-xs{
     margin :1px;
     border-radius:8px;
-} 
+}
+
+.icon {
+    color: rgb(99, 98, 98);
+    margin: 5px;
+} */

@@ -27,7 +27,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let product of products">
+          <tr *ngFor="let product of products let i = index" (click)="selectProduct(i)" [ngClass]="rowIndex == i ? 'active' : '' ">
             <th scope="row">{{ product.productId }}</th>
             <td>{{ product.productName }}</td>
             <td>{{ product.productDescription }}</td>
@@ -43,11 +43,11 @@
               <!-- <p [ngClass]="product.quantity <= 50 ? 'bg-danger' : '' ">Lower Inventory Level</p> -->
               <p *ngIf="product.quantity > 50" [ngStyle]="{'color':'green'}">Sufficient Inventory Level</p>
             </td>
-            <td>
-              <button type="button" class="btn-xs icon">
+            <td colspan="3">
+              <button type="button" [disabled]="rowIndex != i && !isRowSelected" class="btn-xs icon">
                 <i class="fa fa-eye icon"></i>
               </button>
-              <button type="button" class="btn-xs icon">
+              <button type="button" [disabled]="rowIndex != i && !isRowSelected" class="btn-xs icon">
                 <i class="fa fa-pencil-square-o icon"></i>
               </button>
             </td>

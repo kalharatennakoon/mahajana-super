@@ -11,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
 
   public rowIndex!: number;
-  showAddProduct!: boolean;
+  public isRowSelected! : boolean;
+  
+  public showAddProduct! : boolean;
+  
 
   constructor() {}
 
@@ -53,6 +56,7 @@ export class ProductsComponent implements OnInit {
   ];
 
   public selectProduct(selectedRow: number) {
+    this.isRowSelected = true;
     this.rowIndex = selectedRow;
   };
 
