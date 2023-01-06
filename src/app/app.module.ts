@@ -10,6 +10,9 @@ import { ContentLimiterPipe } from './content-limiter.pipe';
 // importing ReactiveFormModule to create Reactive Forms
 import { ReactiveFormsModule } from '@angular/forms';
 
+// importing HttpClientModule to aloow the service to commuinicate with the backend
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 // this array contains all the components that used by the application
 @NgModule({
@@ -22,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

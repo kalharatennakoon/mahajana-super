@@ -1,17 +1,15 @@
-import { Component } from '@angular/core';
-
-// importing FormBuilder & Validators
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Product } from 'src/app/Models/product.model';
+import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
-  styleUrls: ['./add-product.component.css']
+  styleUrls: ['./add-product.component.css'],
 })
-export class AddProductComponent {
 
-  constructor(private fb: FormBuilder) {}
-
+export class AddProductComponent implements OnInit {
   productFrom = this.fb.group({
     productName: ['', Validators.required],
     description: ['', Validators.required],
@@ -22,18 +20,32 @@ export class AddProductComponent {
     batchNumber: ['', Validators.required],
     unitPrice: ['', [Validators.required, Validators.min(1)]],
     quantity: ['', [Validators.required, Validators.min(50)]],
-    createdDate: ['', Validators.required],
   });
 
-  get f() {
+  isDataUploading = false;
+
+  constructor(private fb: FormBuilder,
+    private productService :ProductService) {}
+
+  ngOnInit(): void {}
+
+   get f() {
     return this.productFrom.controls;
   }
 
-  ngOnInt(): void {
-    
+  onSubmit() {
+    const values = this.productFrom.value as Product;
+    values.createdDate = new Date().toDateString();
+    this.isDataUploading = true;
+    this.productService.addProduct(values as Product).subscribe((res) => {
+      debugger;
+      this.isDataUploading = false;
+      this.productFrom.reset();
+    });
   }
 
-  onSubmit() {}
+}
+
 
 
 
@@ -46,38 +58,38 @@ export class AddProductComponent {
 
   
 
-  // Angular Lifecycle Hooks
-  // ngOnInit(): void {
-  //   alert("ngOnInit called");
-  //   console.log("triggered ngOnInit");
-  // }
+// Angular Lifecycle Hooks
 
-  // // ngOnChanges(): void {}
+// ngOnInit(): void {
+//   alert("ngOnInit called");
+//   console.log("triggered ngOnInit");
+// }
+
+// // ngOnChanges(): void {}
 
 
-  // ngDoCheck(): void {
-  //   console.log("triggered ngDoCheck");
-  // }
+// ngDoCheck(): void {
+//   console.log("triggered ngDoCheck");
+// }
 
-  // ngAfterContentInit(): void {
-  //   console.log("triggered ngAfterContentInit");
-  // }
+// ngAfterContentInit(): void {
+//   console.log("triggered ngAfterContentInit");
+// }
 
-  // ngAfterContentChecked(): void {
-  //   console.log("triggered ngAfterContentChecked");
-  // }
+// ngAfterContentChecked(): void {
+//   console.log("triggered ngAfterContentChecked");
+// }
 
-  // ngAfterViewInit(): void {
-  //   console.log("triggered ngAfterViewInit");
-  // }
+// ngAfterViewInit(): void {
+//   console.log("triggered ngAfterViewInit");
+// }
 
-  // ngAfterViewChecked(): void {
-  //   console.log("triggered ngAfterViewChecked");
-  // }
+// ngAfterViewChecked(): void {
+//   console.log("triggered ngAfterViewChecked");
+// }
 
-  // ngOnDestroy(): void {
-  //   alert("ngOnDestroy called");
-  //   console.log("triggered ngOnDestroy");
-  // }
+// ngOnDestroy(): void {
+//   alert("ngOnDestroy called");
+//   console.log("triggered ngOnDestroy");
+// }
 
-}

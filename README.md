@@ -84,5 +84,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 & add it to the imports array in add-product.component.ts file
 ```
 
+10. Angular Service - services are used to communicate with the backend via http. Sharing across multiple components.
+```
+ng generate service <service-name>
+$ ng g s <service-name>
+```
 
 
