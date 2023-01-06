@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
+import { ContentLimiterPipe } from './content-limiter.pipe';
 
 
 // this array contains all the components that used by the application
@@ -12,7 +13,8 @@ import { AddProductComponent } from './components/add-product/add-product.compon
   declarations: [
     AppComponent,
     ProductsComponent,
-    AddProductComponent
+    AddProductComponent,
+    ContentLimiterPipe
   ],
   imports: [
     BrowserModule,
