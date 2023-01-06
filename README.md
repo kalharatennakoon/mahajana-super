@@ -25,3 +25,58 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+---
+## This tutorial covers following Angular features:
+1. Setting up Angular Environment.
+2. Angular App Structure (Configuration File Structure)
+3. Angular Components.
+```
+// to create a new component:
+
+$ ng g c <component-name>
+```
+
+4. Use Bootstrap & Font Awesome
+```
+// to install bootstrap & font-awesome
+
+$ npm install bootstrap
+$ npm install font-awesome
+```
+
+5. Angular Interpolation
+```
+ex: {{ title }}
+```
+
+6. Angular Directives
+```
+[ngClass], [ngStyle]
+
+Structures Directives:
+*ngIf, *ngFor, *ngSwitch
+```
+
+7. Data Binding & Pipes
+```
+one-way data binding
+ex: 
+source-to-view
+view-to-source
+
+two-way data bainding
+source-to-view-to-source
+
+Pipes ( | )
+
+// to greate a new pipe
+$ ng g pipe <pipe-name>
+```
+
+8. Angular Lifecycle Hooks
+
+9. Angular Reactive Forms
+
+
+

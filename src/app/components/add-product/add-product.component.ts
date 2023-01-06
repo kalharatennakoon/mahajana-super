@@ -15,9 +15,8 @@ export class AddProductComponent {
     console.log("triggered ngOnInit");
   }
 
-  // ngOnChanges(): void {
-
-  // }
+  // ngOnChanges(): void {}
+  
 
   ngDoCheck(): void {
     console.log("triggered ngDoCheck");
