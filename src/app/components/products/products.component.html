@@ -30,7 +30,7 @@
           <tr *ngFor="let product of products let i = index" (click)="selectProduct(i)" [ngClass]="rowIndex == i ? 'active' : '' ">
             <th scope="row">{{ product.productId }}</th>
             <td>{{ product.productName }}</td>
-            <td>{{ product.productDescription }}</td>
+            <td>{{ product.productDescription | contentLimiter}}</td>
             <td>{{ product.createdDate | date | uppercase }}</td>
             <td>{{ product.unitPrice | currency: 'Rs. '}}</td>
             <td>{{ product.quantity }}</td>

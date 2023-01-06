@@ -14,7 +14,7 @@ export class ProductsComponent implements OnInit {
   public isRowSelected! : boolean;
   
   public showAddProduct! : boolean;
-  
+
 
   constructor() {}
 
@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit {
       'createdDate' : "2020-11-10",
       'quantity' : 500,
       'unitPrice' : "400",
-      'productDescription' : "White Basmathi Rice imported from Pakistan"
+      'productDescription' : "White Basmathi Rice imported from Pakistan. High quality rice with extra fragnance. Organically grown."
     },
     {
       'productId' : "002",
