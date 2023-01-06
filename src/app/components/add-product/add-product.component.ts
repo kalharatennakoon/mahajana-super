@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+// importing FormBuilder & Validators
+import { FormBuilder, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -7,40 +10,74 @@ import { Component } from '@angular/core';
 })
 export class AddProductComponent {
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
-  // Angular Lifecycle Hooks
-  ngOnInit(): void {
-    alert("ngOnInit called");
-    console.log("triggered ngOnInit");
+  productFrom = this.fb.group({
+    productName: ['', Validators.required],
+    description: ['', Validators.required],
+    category: ['', Validators.required],
+    brand : ['', Validators.required],
+    expiredDate: ['', Validators.required],
+    manufacturedDate: ['', Validators.required],
+    batchNumber: ['', Validators.required],
+    unitPrice: ['', [Validators.required, Validators.min(1)]],
+    quantity: ['', [Validators.required, Validators.min(50)]],
+    createdDate: ['', Validators.required],
+  });
+
+  get f() {
+    return this.productFrom.controls;
   }
 
-  // ngOnChanges(): void {}
+  ngOnInt(): void {
+    
+  }
+
+  onSubmit() {}
+
+
+
+
+
+
+
+
+
+
   
 
-  ngDoCheck(): void {
-    console.log("triggered ngDoCheck");
-  }
+  // Angular Lifecycle Hooks
+  // ngOnInit(): void {
+  //   alert("ngOnInit called");
+  //   console.log("triggered ngOnInit");
+  // }
 
-  ngAfterContentInit(): void {
-    console.log("triggered ngAfterContentInit");
-  }
+  // // ngOnChanges(): void {}
 
-  ngAfterContentChecked(): void {
-    console.log("triggered ngAfterContentChecked");
-  }
 
-  ngAfterViewInit(): void {
-    console.log("triggered ngAfterViewInit");
-  }
+  // ngDoCheck(): void {
+  //   console.log("triggered ngDoCheck");
+  // }
 
-  ngAfterViewChecked(): void {
-    console.log("triggered ngAfterViewChecked");
-  }
+  // ngAfterContentInit(): void {
+  //   console.log("triggered ngAfterContentInit");
+  // }
 
-  ngOnDestroy(): void {
-    alert("ngOnDestroy called");
-    console.log("triggered ngOnDestroy");
-  }
+  // ngAfterContentChecked(): void {
+  //   console.log("triggered ngAfterContentChecked");
+  // }
+
+  // ngAfterViewInit(): void {
+  //   console.log("triggered ngAfterViewInit");
+  // }
+
+  // ngAfterViewChecked(): void {
+  //   console.log("triggered ngAfterViewChecked");
+  // }
+
+  // ngOnDestroy(): void {
+  //   alert("ngOnDestroy called");
+  //   console.log("triggered ngOnDestroy");
+  // }
 
 }

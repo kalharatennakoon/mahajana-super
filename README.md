@@ -76,7 +76,13 @@ $ ng g pipe <pipe-name>
 
 8. Angular Lifecycle Hooks
 
-9. Angular Reactive Forms
+9. Angular Reactive Forms(dynamic forms)
+```
+// importing ReactiveFormModule to create Reactive Forms
+import { ReactiveFormsModule } from '@angular/forms';
+
+& add it to the imports array in add-product.component.ts file
+```
 
 
 

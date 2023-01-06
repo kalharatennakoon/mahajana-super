@@ -7,6 +7,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { ContentLimiterPipe } from './content-limiter.pipe';
 
+// importing ReactiveFormModule to create Reactive Forms
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 // this array contains all the components that used by the application
 @NgModule({
@@ -18,7 +21,8 @@ import { ContentLimiterPipe } from './content-limiter.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
