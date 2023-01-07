@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // importing HttpClientModule to aloow the service to commuinicate with the backend
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
 
 
 
@@ -23,7 +24,8 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
     ProductsComponent,
     AddProductComponent,
     ContentLimitterPipe,
-    EditProductComponent
+    EditProductComponent,
+    ViewProductDetailsComponent
   ],
   imports: [
     BrowserModule,
