@@ -1,4 +1,4 @@
 export interface AddProductResponse {
-    message: string;
-    id: number;
+    message : string;
+    id : number;
 }

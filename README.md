@@ -90,4 +90,12 @@ ng generate service <service-name>
 $ ng g s <service-name>
 ```
 
+11. Angular Component Interaction
+
+12. Angular Template-Driven Forms
+
+13. Angular Routing
+
+
+
 

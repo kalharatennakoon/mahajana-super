@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
-import { ContentLimiterPipe } from './content-limiter.pipe';
+import { ContentLimitterPipe } from './Pipes/content-limitter.pipe';
 
 // importing ReactiveFormModule to create Reactive Forms
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // importing HttpClientModule to aloow the service to commuinicate with the backend
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
+
 
 
 // this array contains all the components that used by the application
@@ -20,13 +22,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppComponent,
     ProductsComponent,
     AddProductComponent,
-    ContentLimiterPipe
+    ContentLimitterPipe,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
